@@ -4,12 +4,13 @@
 	<meta charset="UTF-8">
 	<title>Group Project - Pint</title>
 </head>
-<body data-ng-app="Pinterest">
+<body ng-app="Pinterest">
 	<nav>
 		<button>View All</button>
 		<button>Logout</button>
 	</nav>
 
+	<div ng-view></div>
 
 
 
@@ -17,11 +18,12 @@
 
 	<!-- Third Party  -->
 	<script src="lib/node_modules/angular/angular.min.js"></script>
-	<script src="lib/node_modules/angular/angular-route.min.js"></script>
-	<script src="lib/node_modules/firebase.js"></script>
+	<script src="lib/node_modules/angular-route/angular-route.min.js"></script>
+	<script src="lib/node_modules/firebase/firebase.js"></script>
 	<!-- Application Scripts -->
 	<script src="app/app.js"></script>
 	<!-- Controllers -->
+	<script src="app/controllers/LoginCtrl.js"></script>
 	<!-- Factories -->
 </body>
 </html>
