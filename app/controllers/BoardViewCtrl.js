@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("BoardViewCtrl", function($scope, $location, BoardFactory) {
+app.controller("BoardViewCtrl", function($scope, $location, BoardFactory, IdService) {
 
 	BoardFactory.getBoards()
 	.then(function(boardsCollection) {
@@ -13,4 +13,11 @@ app.controller("BoardViewCtrl", function($scope, $location, BoardFactory) {
 			$location.url("#/boards");
 		});
 	};
+
+	$scope.showPins = function(uniqueId) {
+		IdService.setBoardId(uniqueId)
+		$location.url("#/pins");
+	};
+
+
 });
