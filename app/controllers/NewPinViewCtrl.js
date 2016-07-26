@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("NewPinViewCtrl", function($scope, AuthFactory, PinFactory, $location){
+app.controller("NewPinViewCtrl", function($scope, AuthFactory, PinFactory, $location, IdService){
 
 	$scope.newPin = {
 		title: "",
@@ -11,8 +11,9 @@ app.controller("NewPinViewCtrl", function($scope, AuthFactory, PinFactory, $loca
 	};
 
 	$scope.addPin = function(){
+		console.log(IdService.getBoardId());
 		$scope.newPin.uid = AuthFactory.getUser();
-		// add boardId here
+		$scope.newPin.boardId = IdService.getBoardId()[0];
 		PinFactory.postPinFB($scope.newPin)
 		.then(function(){
 			$location.url("/pins")
