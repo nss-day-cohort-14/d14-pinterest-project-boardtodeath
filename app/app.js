@@ -10,6 +10,7 @@ app.config(function($routeProvider, FBCreds) {
 	};
 	firebase.initializeApp(authConfig);
 
+// route provider tells you html where to go and what code to run
 	$routeProvider.
 	when('/login', {
 		templateUrl: 'partials/login.html',
