@@ -22,5 +22,18 @@ app.factory("PinFactory", function(FirebaseURL, $q, $http) {
 		});
 	};
 
-	return {getPins};
+	const postPinFB = function(newPin){
+		return $q(function(resolve, reject){
+			$http.post(`${FirebaseURL}/pins.json`,
+			JSON.stringify(newPin))
+			.success(function(){
+				resolve();
+			})
+			.error(function(error) {
+				reject(error);
+			});
+		});
+	};
+
+	return {getPins, postPinFB};
 });

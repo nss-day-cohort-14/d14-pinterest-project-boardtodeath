@@ -28,6 +28,10 @@ app.config(function($routeProvider, FBCreds) {
 		templateUrl: 'partials/pin-view.html',
 		controller: 'PinViewCtrl'
 	}).
+	when('/newPin', {
+		templateUrl: 'partials/new-pin-view.html',
+		controller: 'NewPinViewCtrl'
+	}).
 	otherwise('/login');
 
 });
