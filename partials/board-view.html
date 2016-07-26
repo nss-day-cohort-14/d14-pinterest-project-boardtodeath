@@ -2,9 +2,12 @@
 	<div>"Boards"</div>
 	<input type="" placeholder="Search..." ng-model="searchText">
 	<div ng-repeat="board in boards | filter:searchText">
-		<div ng-click="">
+		<div ng-click="viewPins()">
 			<div>{{board.title}}</div>
 			<button type="" ng-click="delete(board.uniqueId)">X</button>
 		</div>
+	</div>
+	<div>
+		<a ng-href="#/newBoard"><button>New Board</button></a>
 	</div>
 </div>

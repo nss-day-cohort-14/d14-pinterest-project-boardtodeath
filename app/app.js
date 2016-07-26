@@ -19,6 +19,10 @@ app.config(function($routeProvider, FBCreds) {
 		templateUrl: 'partials/board-view.html',
 		controller: 'BoardViewCtrl'
 	}).
+	when('/newBoard', {
+		templateUrl: 'partials/new-board-view.html',
+		controller: 'NewBoardCtrl'
+	}).
 	otherwise('/login');
 
 
