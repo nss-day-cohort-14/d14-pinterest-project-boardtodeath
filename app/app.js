@@ -24,10 +24,10 @@ app.config(function($routeProvider, FBCreds) {
 		templateUrl: 'partials/new-board-view.html',
 		controller: 'NewBoardCtrl'
 	}).
+	when('/pins', {
+		templateUrl: 'partials/pin-view.html',
+		controller: 'PinViewCtrl'
+	}).
 	otherwise('/login');
-
-
-
-
 
 });
