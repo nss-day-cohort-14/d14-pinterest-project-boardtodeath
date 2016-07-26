@@ -1,7 +1,7 @@
 "use strict";
 
 const app = angular.module('Pinterest', ['ngRoute'])
-.constant('FirebaseUrl', "https://pinterest-b48dd.firebaseio.com/");
+.constant('FirebaseURL', "https://pinterest-b48dd.firebaseio.com");
 
 app.config(function($routeProvider, FBCreds) {
 	let authConfig = {
@@ -14,6 +14,10 @@ app.config(function($routeProvider, FBCreds) {
 	when('/login', {
 		templateUrl: 'partials/login.html',
 		controller: 'LoginCtrl' 
+	}).
+	when('/boards', {
+		templateUrl: 'partials/board-view.html',
+		controller: 'BoardViewCtrl'
 	}).
 	otherwise('/login');
 
