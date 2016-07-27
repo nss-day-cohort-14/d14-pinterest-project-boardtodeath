@@ -33,6 +33,11 @@
 	text-align: center;
 }
 
+#pin {
+	height: 100px;
+	text-align: center;
+}
+
 /* buttons on all pages, cept nav */
 .text {
 	color: black;

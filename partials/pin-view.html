@@ -1,16 +1,28 @@
-<div class="container">
-	<div>"Pins"</div>
-	<input type="" placeholder="Search..." ng-model="searchText">
-	<div ng-repeat="pin in pins | filter:searchText">
-		<a ng-href="#/specPin" ng-click="viewSelectedPin(pin.uniqueId)">
-			<div>
-				<div>{{pin.title}}</div>
-				<div>{{pin.imgURL}}</div>
-				<button type="" ng-click="deletePin(pin.uniqueId)">X</button>			
+<div class="inner-container">
+	<div class="row">
+		<div class="col s4">
+			<h4>Pin View</h4>
+		</div>
+		<div class="col s4">		
+			<input placeholder="Search Pins" ng-model="searchText">
+		</div>
+		<div class="col s4">
+			<div class="center newer-board">		
+				<a ng-href="#/newPin"><button class="waves-effect waves-light btn blue lighten-4 text">New Pin</button></a>
 			</div>
-		</a>
+		</div>
 	</div>
-	<div>
-		<a ng-href="#/newPin"><button>New Pin</button></a>
-	</div>
+	<div class="row">			
+		<div ng-repeat="pin in pins | filter:searchText">
+			<div id="pin" class="col s6">
+				<a ng-href="#/specPin" ng-click="viewSelectedPin(pin.uniqueId)">
+					<div>
+						<div>{{pin.title}}</div>
+						<img src="{{pin.imgURL}}">
+						<button class="waves-effect waves-light btn blue lighten-4 text" ng-click="deletePin(pin.uniqueId)">X</button>			
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>	
 </div>
