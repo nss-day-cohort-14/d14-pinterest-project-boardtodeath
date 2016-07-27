@@ -1,0 +1,50 @@
+/*** ALL VIEWS ***/
+.inner-container {
+	padding-top: 40px;	
+}
+
+/*** NAV ***/
+#pint {
+	margin: 0;
+	padding: 16px;
+	color: #fff;
+}
+
+.top {
+	color: #fff;	
+}
+
+/*** LOG IN ***/
+#login {
+	padding-top: 100px;
+}
+
+/*** BOARD VIEW ***/
+#board-search {
+	padding-top: 10px;
+}
+
+.newer-board {
+	padding-top: 12px;
+}
+
+#board {
+	height: 100px;
+	text-align: center;
+}
+
+/* buttons on all pages, cept nav */
+.text {
+	color: black;
+}
+
+/*** NEW BOARD VIEW ***/
+.new-board {
+	text-align: center;
+}
+
+/* all submit buttons */
+.submission {
+	text-align: center;
+}
+

@@ -1,8 +1,24 @@
-<div>
-	<!-- built new board and linked input to NewBoardCtrl -->
-	<div>Title: <input type="" ng-model="newBoard.title"></div>
-	<div>Tag: <input type="" ng-model="newBoard.tag"></div>
-	<div>Description: <input type="" ng-model="newBoard.description"></div>
-	<!-- runs addBoard function -->
-	<button ng-click="addBoard()">Submit</button>
+<div class="inner-container">
+	<div class="row">
+		<!-- built new board and linked input to NewBoardCtrl -->
+		<div class="col s2"></div>
+		<div class="col s8 new-board">Title: <input ng-model="newBoard.title"></div>
+		<div class="col s2"></div>
+	</div>
+	<div class="row">
+		<div class="col s2"></div>	
+		<div class="col s8 new-board">Tag: <input ng-model="newBoard.tag"></div>
+		<div class="col s2"></div>	
+	</div>	
+	<div class="row">
+		<div class="col s2"></div>	
+		<div class="col s8 new-board">Description: <input ng-model="newBoard.description"></div>
+		<div class="col s2"></div>	
+	</div>
+	<div class="row">
+		<div class="col s12 submission">	
+		<!-- runs addBoard function -->
+			<button class="waves-effect waves-light btn blue lighten-4 text" ng-click="addBoard()">Submit</button>
+		</div>	
+	</div>
 </div>
