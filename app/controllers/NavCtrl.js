@@ -15,7 +15,7 @@ app.controller("NavCtrl", function($scope, $location) {
 			$location.url("/boards")
 		} else if ($location.url() === "/newPin") {
 			$location.url("/pins")
-		} else if ($location.url() === "/specificPin") {
+		} else if ($location.url() === "/specPin") {
 			$location.url("/pins")
 		}
 
