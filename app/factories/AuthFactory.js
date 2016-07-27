@@ -8,10 +8,7 @@ app.factory('AuthFactory', function() {
 	// Assign current user Id
 	firebase.auth().onAuthStateChanged(function(user) {
 		if(user) {
-			console.log("User Logged IN");
 			currentUserId = user.uid;
-		} else {
-			console.log("not logged in");
 		}
 	});
 

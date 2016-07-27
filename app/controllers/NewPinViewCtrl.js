@@ -12,7 +12,6 @@ app.controller("NewPinViewCtrl", function($scope, AuthFactory, PinFactory, $loca
 	};
 
 	$scope.addPin = function(){
-		console.log(IdService.getBoardId());
 		$scope.newPin.uid = AuthFactory.getUser();
 		$scope.newPin.boardId = IdService.getBoardId()[0];
 		PinFactory.postPinFB($scope.newPin)
