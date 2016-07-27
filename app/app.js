@@ -32,6 +32,10 @@ app.config(function($routeProvider, FBCreds) {
 		templateUrl: 'partials/new-pin-view.html',
 		controller: 'NewPinViewCtrl'
 	}).
+	when('/specPin', {
+		templateUrl: 'partials/specific-pin.html',
+		controller: 'SpecificViewCtrl'
+	}).
 	otherwise('/login');
 
 });
