@@ -7,4 +7,19 @@ app.controller("NavCtrl", function($scope, $location) {
 			$location.url("/login");
 		});
 	};
+
+	$scope.viewAll = function() {
+		if ($location.url() === "/pins") {
+			$location.url("/boards")
+		} else if ($location.url() === "/newBoard") {
+			$location.url("/boards")
+		} else if ($location.url() === "/newPin") {
+			$location.url("/pins")
+		} else if ($location.url() === "/specificPin") {
+			$location.url("/pins")
+		}
+
+
+	}
+
 });
