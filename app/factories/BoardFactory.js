@@ -1,11 +1,12 @@
 "use strict";
 
-app.factory("BoardFactory", function(FirebaseURL, $q, $http) {
+app.factory("BoardFactory", function(FirebaseURL, $q, $http, AuthFactory) {
 
 	const getBoards = function() {
+		let userId = AuthFactory.getUser();
 		let boards = [];
 		return $q(function(resolve, reject) {
-			$http.get(`${FirebaseURL}/boards.json`)
+			$http.get(`${FirebaseURL}/boards.json?orderBy="uid"&equalTo="${userId}"`)
 			.success(function(boardsObj) {
 				let boardCollection = boardsObj;
 				Object.keys(boardCollection).forEach(function(key) {
