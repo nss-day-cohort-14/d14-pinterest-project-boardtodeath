@@ -7,7 +7,8 @@ app.controller("NewPinViewCtrl", function($scope, AuthFactory, PinFactory, $loca
 		imgURL: "",
 		comments: "",
 		uid: "",
-		boardId: ""
+		boardId: "",
+		uniqeId: ""
 	};
 
 	$scope.addPin = function(){
