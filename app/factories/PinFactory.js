@@ -22,6 +22,18 @@ app.factory("PinFactory", function(FirebaseURL, $q, $http, IdService) {
 		});
 	};
 
+	const deletePinFB = function(uniqueId) {
+		return $q(function(resolve, reject) {
+			$http.delete(`${FirebaseURL}/pins/${uniqueId}.json`)
+			.success(function() {
+				resolve();
+			})
+			.error(function(error){
+				reject(error);
+			});
+		});
+	};	
+
 	const postPinFB = function(newPin){
 		return $q(function(resolve, reject){
 			$http.post(`${FirebaseURL}/pins.json`,
@@ -35,5 +47,5 @@ app.factory("PinFactory", function(FirebaseURL, $q, $http, IdService) {
 		});
 	};
 
-	return {getPins, postPinFB};
+	return {getPins, postPinFB, deletePinFB};
 });
