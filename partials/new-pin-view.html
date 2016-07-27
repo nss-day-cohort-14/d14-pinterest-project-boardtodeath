@@ -1,6 +1,22 @@
-<div>
-	<div>Title: <input type="" ng-model="newPin.title"></div>
-	<div>ImgURL: <input type="" ng-model="newPin.imgURL"></div>
-	<div>Comments: <input type="" ng-model="newPin.comments"></div>
-	<button ng-click="addPin()">Submit</button>
+<div class="inner-container">
+	<div class="row">
+		<div class="col s2"></div>	
+		<div class="col s8 new-board">Title: <input ng-model="newPin.title"></div>
+		<div class="col s2"></div>
+	</div>
+	<div class="row">
+		<div class="col s2"></div>			
+		<div  class="col s8 new-board">ImgURL: <input ng-model="newPin.imgURL"></div>
+		<div class="col s2"></div>
+	</div>
+	<div class="row">
+		<div class="col s2"></div>			
+		<div class="col s8 new-board">Comments: <input ng-model="newPin.comments"></div>
+		<div class="col s2"></div>
+	</div>
+	<div class="row">
+		<div class="col s12 submission">			
+			<button class="waves-effect waves-light btn blue lighten-4 text" ng-click="addPin()">Submit</button>
+		</div>
+	</div>		
 </div>

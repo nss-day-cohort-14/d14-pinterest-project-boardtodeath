@@ -1,16 +1,28 @@
-<div class="container">
-	<div>"Boards"</div>
-	<input type="" placeholder="Search..." ng-model="searchText">
-	<div ng-repeat="board in boards | filter:searchText">
-		<a ng-href="#/pins" ng-click="showPins(board.uniqueId)" >
-			<div>
-				<div>{{board.title}}</div>
-				<button type="" ng-click="delete(board.uniqueId)">X</button>
+<div class="inner-container">
+	<div class="row">
+		<div class="col s4">
+			<h4>Board View</h4>
+		</div>
+		<div class="col s4">
+				<input id="board-search" placeholder="Search Boards" ng-model="searchText">
+		</div>
+		<div class="col s4">
+			<!-- links to new-board-view.html -->
+			<div class="center newer-board">
+				<a ng-href="#/newBoard"><button class="waves-effect waves-light btn blue lighten-4 text">New Board</button></a>
+			</div>		
+		</div>
+	</div>
+	<div class="row">
+		<div ng-repeat="board in boards | filter:searchText">
+			<div id="board" class="col s6">
+
+				<a ng-href="#/pins" ng-click="showPins(board.uniqueId)" >		
+					<div>{{board.title}}</div>
+					<button class="waves-effect waves-light btn blue lighten-4 text" type="" ng-click="delete(board.uniqueId)">X</button>
+				</a>
+
 			</div>
-		</a>
+		</div>
 	</div>
-	<div>
-		<!-- links to new-board-view.html -->
-		<a ng-href="#/newBoard"><button>New Board</button></a>
-	</div>
-</div>
+</div>	

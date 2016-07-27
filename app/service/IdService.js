@@ -2,6 +2,7 @@
 
 app.service("IdService", function() {
 	let currentBoardId = [];
+	let currentPinId = [];
 
 	const setBoardId = function(currentId) {
 		currentBoardId.splice(0, 1, currentId)
@@ -9,8 +10,15 @@ app.service("IdService", function() {
 
 	const getBoardId = function() {
 		return currentBoardId;
-	}
+	};
 
+	const setPinId = function(currentId) {
+		currentPinId.splice(0, 1, currentId)
+	};
 
-	return {setBoardId, getBoardId};
+	const getPinId = function() {
+		return currentPinId;
+	};
+
+	return {setBoardId, getBoardId, setPinId, getPinId};
 });

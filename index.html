@@ -3,23 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Group Project - Pint</title>
+	<link rel="stylesheet" href="lib/node_modules/materialize-css/dist/css/materialize.min.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body ng-app="Pinterest">
-	<nav ng-controller="NavCtrl">
-		<button ng-click="viewAll()">View All</button>
-		<button ng-click="logout()">Logout</button>
+  <nav class="blue darken-4" ng-controller="NavCtrl">
+    <div class="nav-wrapper">
+    	<h1 id="pint" class="brand-logo center">Something Pintresty</h1>
+    	<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><button class="btn-flat top" ng-click="viewAll()">View All</button></li>
+				<li><button class="btn-flat top" ng-click="logout()">Logout</button></li>
+			</ul>
+		</div>
 	</nav>
-
-	<div ng-view></div>
+	<div class="container">
+		<div ng-view></div>
+	</div>
 
 
 
 
 
 	<!-- Third Party  -->
+	<script src="lib/node_modules/jquery.2/node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="lib/node_modules/angular/angular.min.js"></script>
 	<script src="lib/node_modules/angular-route/angular-route.min.js"></script>
 	<script src="lib/node_modules/firebase/firebase.js"></script>
+	<script src="lib/node_modules/materialize-css/dist/js/materialize.min.js"></script>
 	<!-- Application Scripts -->
 	<script src="app/app.js"></script>
 	<!-- Controllers -->
@@ -30,6 +40,7 @@
 	<script src="app/controllers/NewBoardCtrl.js"></script>
 	<script src="app/controllers/PinViewCtrl.js"></script>
 	<script src="app/controllers/NewPinViewCtrl.js"></script>
+	<script src="app/controllers/SpecificViewCtrl.js"></script>
 	<!-- Factories -->
 	<script src="app/factories/AuthFactory.js"></script>
 	<script src="app/factories/BoardFactory.js"></script>
