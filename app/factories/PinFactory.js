@@ -50,15 +50,9 @@ app.factory("PinFactory", function(FirebaseURL, $q, $http, IdService) {
 	const getSpecPins = function(){
 		let pinId = IdService.getPinId();
 		console.log("getSpecPins", pinId);
-		// let pins = [];
 		return $q(function(resolve, reject){
 			$http.get(`${FirebaseURL}/pins/${pinId}.json`)
 			.success(function(pinsObj){
-				// let pinCollection = pinsObj;
-				// Object.keys(pinCollection).forEach(function(key){
-				// 	pinCollection[key].uniqueId = key;
-				// 	pins.push(pinCollection[key]);
-				// });
 				resolve(pinsObj);
 			})
 			.error(function(error){

@@ -18,7 +18,9 @@
 				<a ng-href="#/specPin" ng-click="viewSelectedPin(pin.uniqueId)">
 					<div>
 						<div>{{pin.title}}</div>
-						<img src="{{pin.imgURL}}">
+						<div>
+						<img class="smaller" src="{{pin.imgURL}}">
+						</div>
 						<button class="waves-effect waves-light btn blue lighten-4 text" ng-click="deletePin(pin.uniqueId)">X</button>			
 					</div>
 				</a>
