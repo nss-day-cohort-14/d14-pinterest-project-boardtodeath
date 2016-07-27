@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("PinViewCtrl", function($scope, PinFactory, $location) {
+app.controller("PinViewCtrl", function($scope, PinFactory, $location, IdService) {
 
 	PinFactory.getPins()
 	.then(function(pinCollection){
@@ -13,6 +13,11 @@ app.controller("PinViewCtrl", function($scope, PinFactory, $location) {
 		.then(function() {
 			$location.url("#/pins");
 		});
+	};
+
+	$scope.viewSelectedPin = function(uniqueId){
+		IdService.setPinId(uniqueId);
+		$location.url('#/specPin')	
 	};
 
 });

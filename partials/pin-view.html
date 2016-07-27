@@ -2,11 +2,13 @@
 	<div>"Pins"</div>
 	<input type="" placeholder="Search..." ng-model="searchText">
 	<div ng-repeat="pin in pins | filter:searchText">
-		<div ng-click="viewSelectedPin()">
-			<div>{{pin.title}}</div>
-			<div>{{pin.imgURL}}</div>
-			<button type="" ng-click="deletePin(pin.uniqueId)">X</button>			
-		</div>
+		<a ng-href="#/specPin" ng-click="viewSelectedPin(pin.uniqueId)">
+			<div>
+				<div>{{pin.title}}</div>
+				<div>{{pin.imgURL}}</div>
+				<button type="" ng-click="deletePin(pin.uniqueId)">X</button>			
+			</div>
+		</a>
 	</div>
 	<div>
 		<a ng-href="#/newPin"><button>New Pin</button></a>
