@@ -1,4 +1,4 @@
-<div class="inner-container">
+<div class="inner-container">nrav;
 	<div class="row">
 		<div class="col s4">
 			<h4>Board View</h4>
@@ -16,12 +16,10 @@
 	<div class="row">
 		<div ng-repeat="board in boards | filter:searchText">
 			<div id="board" class="col s6">
-
 				<a ng-href="#/pins" ng-click="showPins(board.uniqueId)" >		
 					<div>{{board.title}}</div>
 					<button class="waves-effect waves-light btn blue lighten-4 text" ng-click="delete(board.uniqueId)">X</button>
 				</a>
-
 			</div>
 		</div>
 	</div>

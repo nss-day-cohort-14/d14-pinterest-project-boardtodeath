@@ -19,5 +19,4 @@ app.controller("BoardViewCtrl", function($scope, $location, BoardFactory, IdServ
 		$location.url("#/pins");
 	};
 
-
 });

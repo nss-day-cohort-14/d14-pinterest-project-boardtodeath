@@ -2,9 +2,8 @@
 
 app.factory("PinFactory", function(FirebaseURL, $q, $http, IdService) {
 
-	const getPins = function(){
+	const getPins = function(){=$
 		let boardId = IdService.getBoardId();
-		console.log(boardId);
 		let pins = [];
 		return $q(function(resolve, reject){
 			$http.get(`${FirebaseURL}/pins.json?orderBy="boardId"&equalTo="${boardId}"`)

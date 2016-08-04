@@ -1,4 +1,4 @@
-"use strict";
+ "use strict";
 
 const app = angular.module('Pinterest', ['ngRoute'])
 .constant('FirebaseURL', "https://pinterest-b48dd.firebaseio.com");

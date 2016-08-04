@@ -2,9 +2,11 @@
 
 app.controller("NavCtrl", function($scope, $location) {
 	$scope.logout = function() {
+		console.log("Oh shit whaddup")
 		firebase.auth().signOut()
 		.then(function() {
 			$location.url("/login");
+			$scope.$apply();
 		});
 	};
 

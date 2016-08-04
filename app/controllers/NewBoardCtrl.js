@@ -2,12 +2,6 @@
 
 app.controller("NewBoardCtrl", function($scope, $location, BoardFactory, AuthFactory) {
 	// establish new board obj
-	$scope.newBoard = {
-		title: "",
-		tag: "",
-		description: "",
-		uid: ""
-	};
 
 	$scope.addBoard = function() {
 		// add user id to new Board obj
@@ -19,8 +13,4 @@ app.controller("NewBoardCtrl", function($scope, $location, BoardFactory, AuthFac
 			$location.url("/boards");
 		});
 	};
-
-
-
-
 });

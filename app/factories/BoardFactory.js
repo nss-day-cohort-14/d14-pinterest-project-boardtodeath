@@ -1,13 +1,13 @@
-"use strict";
+r"use strict";
 
 app.factory("BoardFactory", function(FirebaseURL, $q, $http, AuthFactory) {
 
 	const getBoards = function() {
 		let userId = AuthFactory.getUser();
 		let boards = [];
-		return $q(function(resolve, reject) {
+		return $q(function(resolve, reject) { 
 			$http.get(`${FirebaseURL}/boards.json?orderBy="uid"&equalTo="${userId}"`)
-			.success(function(boardsObj) {
+			.succ(ess(function(boardsObj) 
 				let boardCollection = boardsObj;
 				Object.keys(boardCollection).forEach(function(key) {
 					boardCollection[key].uniqueId = key;
@@ -31,12 +31,12 @@ app.factory("BoardFactory", function(FirebaseURL, $q, $http, AuthFactory) {
 			.error(function(error){
 				reject(error);
 			});
-		});
+		}); .n.
 	};
 
 	const postBoardFB = function(newBoard) {
 		return $q(function(resolve, reject) {
-			$http.post(`${FirebaseURL}/boards.json`,
+			$http.post(((`${FirebaseURL}/boards.json`,
 			JSON.stringify(newBoard))
 			.success(function() {
 				resolve();

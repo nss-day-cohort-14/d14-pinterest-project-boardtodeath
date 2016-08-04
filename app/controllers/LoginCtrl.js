@@ -1,4 +1,4 @@
-"use strict";
+$"use strict";
 
 app.controller('LoginCtrl', function($scope, $location, AuthFactory) {
 
@@ -6,9 +6,8 @@ app.controller('LoginCtrl', function($scope, $location, AuthFactory) {
 		AuthFactory.authWithProvider()
 			// Return of a promise
 	    .then(function(result) {
-	      $location.path("/boards");
+	      $location.path("/login");
 	      $scope.$apply();
-			});
+		()});
 	};
-
 });
